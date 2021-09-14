@@ -1,5 +1,5 @@
 instance:
-  clientUrl: http://localhost
+  clientUrl: https://fair-data-point-client.glitch.me/
 
 server:
   port: 80
