@@ -1,12 +1,12 @@
 instance:
   index: false
-  clientUrl: http://localhost:8080
-  behindProxy: true
+  clientUrl: https://fair-data-point-client.glitch.me/
+  behindProxy: false
 
 spring:
   data:
     mongodb:
-      uri: mongodb://mongo:27017/fdp
+      uri: mongodb://localhost:27017
     web:
       pageable:
         default-page-size: 50
@@ -30,7 +30,6 @@ management:
     web:
       exposure:
         include: health, info
-
 security:
   jwt:
     token:
@@ -58,13 +57,12 @@ metadataProperties:
   accessRightsDescription: This resource has no access restriction
 
 openapi:
-  title: FAIR Data Point API
+  title: Penn BIBFRAME Data Point API
   version: 1.12.0
-  description: "The reference implementation of the metadata registration service: A service implementing the API specification. It contains an authentication system to allow maintainers to define and update metadata. Read-only access to the data is public."
+  description: "Penn BIBFRAME Data Point."
   contact:
-    name: Luiz Bonino
-    email: luiz.bonino@go-fair.org
-    url: https://github.com/FAIRDataTeam/FAIRDataPoint
+    name: Jim Hahn
+    email: jimhahn@upenn.edu
 
 springdoc:
   swagger-ui:
